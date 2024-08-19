@@ -112,7 +112,7 @@ if use_webcam:
             break
 
     
-    send_email("Dog Detection Alert", "A dog has been detected in the image. Please find the image attached.", "sendEmail", "receiveEmail", "sendEmailPW", 'image_with_bboxes.png')
+    send_email(f"{selected_category} Detection Alert", f"A {selected_category} has been detected in the image. Please find the image attached.", "sendEmail", "receiveEmail", "sendEmailPW", 'image_with_bboxes.png')
 
     camera.release()
     cv2.destroyAllWindows()
@@ -149,4 +149,4 @@ else:
         
         # Send the email
         if object_detected:
-            send_email("Dog Detection Alert", "A dog has been detected in the image. Please find the image attached.", "sendEmail", "receiveEmail", "sendEmailPW", 'image_with_bboxes.png')
+            send_email(f"{selected_category} Detection Alert", f"A {selected_category} has been detected in the image. Please find the image attached.", "sendEmail", "receiveEmail", "sendEmailPW", 'image_with_bboxes.png')
